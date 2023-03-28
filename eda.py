@@ -1,7 +1,6 @@
 from re import A
 import numpy as np
 import pandas as pd
-import seaborn as sns
 import streamlit as st
 from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
@@ -10,10 +9,6 @@ st.markdown('''
 # Exploratory Data Analysis Web Application
 ''')
 
-#How to upload file from PC
-with st.sidebar.header("Upload your dataset(.csv)"):
-    uploaded_file = st.sidebar.file_uploader("Upload your file", type=['csv'])
-    df = sns.load_dataset('iris')
 
 #Profiling report for pandas
 if uploaded_file is not None:
